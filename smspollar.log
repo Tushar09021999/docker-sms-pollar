@@ -1,0 +1,873 @@
+2024-01-10 01:23:48.985  INFO 10904 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 10904 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:23:48.993 DEBUG 10904 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:23:48.994  INFO 10904 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:23:49.984  INFO 10904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:23:50.120  INFO 10904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:23:51.400  INFO 10904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:23:51.414  INFO 10904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:23:51.414  INFO 10904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:23:51.585  INFO 10904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:23:51.586  INFO 10904 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2504 ms
+2024-01-10 01:23:51.695 ERROR 10904 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2024-01-10 01:23:51.699  WARN 10904 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-01-10 01:23:51.704  INFO 10904 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-10 01:23:51.728  INFO 10904 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-10 01:23:51.762 ERROR 10904 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.17.jar:2.7.17]
+	at com.SmsPollar.SmsPollarApplication.main(SmsPollarApplication.java:21) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 36 common frames omitted
+
+2024-01-10 01:25:02.904  INFO 2556 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 2556 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:25:02.907 DEBUG 2556 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:25:02.908  INFO 2556 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:25:03.664  INFO 2556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:25:03.749  INFO 2556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:25:04.558  INFO 2556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:25:04.571  INFO 2556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:25:04.572  INFO 2556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:25:04.695  INFO 2556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:25:04.695  INFO 2556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1723 ms
+2024-01-10 01:25:04.778 ERROR 2556 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2024-01-10 01:25:04.783  WARN 2556 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-01-10 01:25:04.786  INFO 2556 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-10 01:25:04.799  INFO 2556 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-10 01:25:04.833 ERROR 2556 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.17.jar:2.7.17]
+	at com.SmsPollar.SmsPollarApplication.main(SmsPollarApplication.java:21) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 36 common frames omitted
+
+2024-01-10 01:26:05.614  INFO 29728 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 29728 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:26:05.617 DEBUG 29728 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:26:05.618  INFO 29728 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:26:06.499  INFO 29728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:26:06.600  INFO 29728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:26:07.535  INFO 29728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:26:07.552  INFO 29728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:26:07.553  INFO 29728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:26:07.688  INFO 29728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:26:07.689  INFO 29728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1989 ms
+2024-01-10 01:26:07.842 ERROR 29728 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2024-01-10 01:26:07.848  WARN 29728 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-01-10 01:26:07.853  INFO 29728 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-10 01:26:07.873  INFO 29728 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-10 01:26:07.903 ERROR 29728 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.17.jar:2.7.17]
+	at com.SmsPollar.SmsPollarApplication.main(SmsPollarApplication.java:21) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 36 common frames omitted
+
+2024-01-10 01:27:00.848  INFO 3788 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 3788 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:27:00.852 DEBUG 3788 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:27:00.853  INFO 3788 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:27:01.679  INFO 3788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:27:01.769  INFO 3788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:27:02.603  INFO 3788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:27:02.613  INFO 3788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:27:02.614  INFO 3788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:27:02.730  INFO 3788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:27:02.730  INFO 3788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1798 ms
+2024-01-10 01:27:02.824 ERROR 3788 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2024-01-10 01:27:02.829  WARN 3788 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-01-10 01:27:02.833  INFO 3788 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-10 01:27:02.847  INFO 3788 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-10 01:27:02.890 ERROR 3788 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.17.jar:2.7.17]
+	at com.SmsPollar.SmsPollarApplication.main(SmsPollarApplication.java:21) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 36 common frames omitted
+
+2024-01-10 01:28:52.214  INFO 13256 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 13256 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:28:52.217 DEBUG 13256 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:28:52.217  INFO 13256 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:28:52.981  INFO 13256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:28:53.070  INFO 13256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:28:53.953  INFO 13256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:28:53.964  INFO 13256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:28:53.964  INFO 13256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:28:54.092  INFO 13256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:28:54.092  INFO 13256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1798 ms
+2024-01-10 01:28:54.174 ERROR 13256 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+2024-01-10 01:28:54.179  WARN 13256 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-01-10 01:28:54.185  INFO 13256 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-10 01:28:54.200  INFO 13256 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-10 01:28:54.232 ERROR 13256 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.17.jar:2.7.17]
+	at com.SmsPollar.SmsPollarApplication.main(SmsPollarApplication.java:21) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 36 common frames omitted
+
+2024-01-10 01:29:45.211  INFO 30068 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.9 on DESKTOP-JOBC9OT with PID 30068 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:29:45.214 DEBUG 30068 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:29:45.214  INFO 30068 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:29:45.747  INFO 30068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:29:45.787  INFO 30068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:29:46.198  INFO 30068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:29:46.208  INFO 30068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:29:46.209  INFO 30068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:29:46.305  INFO 30068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:29:46.305  INFO 30068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1041 ms
+2024-01-10 01:29:46.369 ERROR 30068 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739
+2024-01-10 01:29:46.372  WARN 30068 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-01-10 01:29:46.374  INFO 30068 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-10 01:29:46.385  INFO 30068 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-10 01:29:46.404 ERROR 30068 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.17.jar:2.7.17]
+	at com.SmsPollar.SmsPollarApplication.main(SmsPollarApplication.java:21) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 36 common frames omitted
+
+2024-01-10 01:30:18.357  INFO 20940 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.9 on DESKTOP-JOBC9OT with PID 20940 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:30:18.359 DEBUG 20940 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:30:18.360  INFO 20940 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:30:18.839  INFO 20940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:30:18.881  INFO 20940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:30:19.282  INFO 20940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:30:19.290  INFO 20940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:30:19.290  INFO 20940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:30:19.379  INFO 20940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:30:19.380  INFO 20940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 976 ms
+2024-01-10 01:30:19.442 ERROR 20940 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739
+2024-01-10 01:30:19.445  WARN 20940 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+2024-01-10 01:30:19.447  INFO 20940 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-10 01:30:19.458  INFO 20940 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-10 01:30:19.477 ERROR 20940 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:536) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.17.jar:2.7.17]
+	at com.SmsPollar.SmsPollarApplication.main(SmsPollarApplication.java:21) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:633) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.30.jar:5.3.30]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 35 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183) ~[spring-boot-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90) ~[spring-boot-autoconfigure-2.7.17.jar:2.7.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.30.jar:5.3.30]
+	... 36 common frames omitted
+
+2024-01-10 01:31:31.986  INFO 27188 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 27188 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:31:31.990 DEBUG 27188 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:31:31.990  INFO 27188 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:31:32.820  INFO 27188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:31:32.918  INFO 27188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:31:33.826  INFO 27188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:31:33.838  INFO 27188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:31:33.839  INFO 27188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:31:33.959  INFO 27188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:31:33.959  INFO 27188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1886 ms
+2024-01-10 01:31:34.237  INFO 27188 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-10 01:31:34.306  INFO 27188 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-10 01:31:34.614  INFO 27188 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-10 01:31:34.736  INFO 27188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-10 01:31:35.360  INFO 27188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-10 01:31:35.380  INFO 27188 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2024-01-10 01:31:36.398  INFO 27188 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-10 01:31:36.410  INFO 27188 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 01:31:36.961  WARN 27188 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-10 01:31:37.377  INFO 27188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-10 01:31:37.388  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:37.389  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:37.390  INFO 27188 --- [main] com.SmsPollar.SmsPollarApplication       : Started SmsPollarApplication in 5.953 seconds (JVM running for 6.533)
+2024-01-10 01:31:37.475  INFO 27188 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-10 01:31:37.475  INFO 27188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-10 01:31:37.476  INFO 27188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-10 01:31:37.509  INFO 27188 --- [http-nio-8080-exec-1] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:37.509 DEBUG 27188 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:37.654 DEBUG 27188 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:38.391  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:38.392  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:38.394  INFO 27188 --- [http-nio-8080-exec-2] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:38.394 DEBUG 27188 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:38.397 DEBUG 27188 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:39.399  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:39.399  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:39.401  INFO 27188 --- [http-nio-8080-exec-3] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:39.401 DEBUG 27188 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:39.403 DEBUG 27188 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:40.398  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:40.398  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:40.400  INFO 27188 --- [http-nio-8080-exec-4] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:40.401 DEBUG 27188 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:40.404 DEBUG 27188 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:41.399  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:41.399  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:41.401  INFO 27188 --- [http-nio-8080-exec-5] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:41.402 DEBUG 27188 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:41.404 DEBUG 27188 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:42.393  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:42.394  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:42.397  INFO 27188 --- [http-nio-8080-exec-6] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:42.397 DEBUG 27188 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:42.399 DEBUG 27188 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:43.391  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:43.392  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:43.394  INFO 27188 --- [http-nio-8080-exec-7] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:43.394 DEBUG 27188 --- [http-nio-8080-exec-7] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:43.396 DEBUG 27188 --- [http-nio-8080-exec-7] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:44.401  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:44.401  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:44.403  INFO 27188 --- [http-nio-8080-exec-8] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:44.404 DEBUG 27188 --- [http-nio-8080-exec-8] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:44.406 DEBUG 27188 --- [http-nio-8080-exec-8] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:45.394  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:45.394  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:45.396  INFO 27188 --- [http-nio-8080-exec-9] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:45.397 DEBUG 27188 --- [http-nio-8080-exec-9] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:45.399 DEBUG 27188 --- [http-nio-8080-exec-9] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:46.392  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:46.392  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:46.394  INFO 27188 --- [http-nio-8080-exec-10] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:46.394 DEBUG 27188 --- [http-nio-8080-exec-10] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:46.396 DEBUG 27188 --- [http-nio-8080-exec-10] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:47.389  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:47.390  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:47.392  INFO 27188 --- [http-nio-8080-exec-1] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:47.392 DEBUG 27188 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:47.395 DEBUG 27188 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:48.387  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:48.388  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:48.390  INFO 27188 --- [http-nio-8080-exec-2] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:48.390 DEBUG 27188 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:48.391 DEBUG 27188 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:49.398  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:49.398  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:49.401  INFO 27188 --- [http-nio-8080-exec-3] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:49.401 DEBUG 27188 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:49.403 DEBUG 27188 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:50.397  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:50.397  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:50.399  INFO 27188 --- [http-nio-8080-exec-4] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:50.399 DEBUG 27188 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:50.402 DEBUG 27188 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:51.390  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:31:51.390  INFO 27188 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:31:51.392  INFO 27188 --- [http-nio-8080-exec-5] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:31:51.392 DEBUG 27188 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:31:51.394 DEBUG 27188 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:31:51.811  INFO 27188 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 01:31:51.813  INFO 27188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-10 01:31:51.824  INFO 27188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-10 01:32:26.497  INFO 13484 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 13484 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 01:32:26.500 DEBUG 13484 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 01:32:26.501  INFO 13484 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 01:32:27.258  INFO 13484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 01:32:27.323  INFO 13484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2024-01-10 01:32:28.087  INFO 13484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 01:32:28.097  INFO 13484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 01:32:28.097  INFO 13484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 01:32:28.215  INFO 13484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 01:32:28.215  INFO 13484 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1643 ms
+2024-01-10 01:32:28.450  INFO 13484 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-10 01:32:28.505  INFO 13484 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-10 01:32:28.789  INFO 13484 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-10 01:32:28.889  INFO 13484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-10 01:32:32.096  INFO 13484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-10 01:32:32.110  INFO 13484 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2024-01-10 01:32:35.844  INFO 13484 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-10 01:32:35.857  INFO 13484 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 01:32:36.352  WARN 13484 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-10 01:32:36.727  INFO 13484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-10 01:32:36.736  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:36.737  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:36.739  INFO 13484 --- [main] com.SmsPollar.SmsPollarApplication       : Started SmsPollarApplication in 10.772 seconds (JVM running for 11.28)
+2024-01-10 01:32:36.832  INFO 13484 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-10 01:32:36.832  INFO 13484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-10 01:32:36.833  INFO 13484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-10 01:32:36.863  INFO 13484 --- [http-nio-8080-exec-1] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:36.863 DEBUG 13484 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:32:37.531 DEBUG 13484 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:32:37.748  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:37.748  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:37.750  INFO 13484 --- [http-nio-8080-exec-2] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:37.750 DEBUG 13484 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:32:37.995 DEBUG 13484 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:32:38.739  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:38.740  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:38.741  INFO 13484 --- [http-nio-8080-exec-6] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:38.742 DEBUG 13484 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:32:39.229 DEBUG 13484 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:32:39.736  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:39.736  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:39.738  INFO 13484 --- [http-nio-8080-exec-4] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:39.739 DEBUG 13484 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:32:40.225 DEBUG 13484 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:32:40.744  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:40.744  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:40.746  INFO 13484 --- [http-nio-8080-exec-5] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:40.746 DEBUG 13484 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:32:41.233 DEBUG 13484 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:32:41.740  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:41.740  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:41.742  INFO 13484 --- [http-nio-8080-exec-3] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:41.743 DEBUG 13484 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:32:42.229 DEBUG 13484 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:32:42.748  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:42.748  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:42.752  INFO 13484 --- [http-nio-8080-exec-7] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:42.752 DEBUG 13484 --- [http-nio-8080-exec-7] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 01:32:43.241 DEBUG 13484 --- [http-nio-8080-exec-7] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 01:32:43.747  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 01:32:43.748  INFO 13484 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 01:32:43.752  INFO 13484 --- [http-nio-8080-exec-8] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 01:32:43.752 DEBUG 13484 --- [http-nio-8080-exec-8] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:07:47.311  INFO 15744 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 15744 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 02:07:47.316 DEBUG 15744 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 02:07:47.316  INFO 15744 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 02:07:48.086  INFO 15744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 02:07:48.166  INFO 15744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interfaces.
+2024-01-10 02:07:48.997  INFO 15744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 02:07:49.009  INFO 15744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 02:07:49.010  INFO 15744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 02:07:49.127  INFO 15744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 02:07:49.127  INFO 15744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1738 ms
+2024-01-10 02:07:49.439  INFO 15744 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-10 02:07:49.505  INFO 15744 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-10 02:07:49.819  INFO 15744 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-10 02:07:49.935  INFO 15744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-10 02:07:53.056  INFO 15744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-10 02:07:53.078  INFO 15744 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2024-01-10 02:07:54.624  INFO 15744 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-10 02:07:54.634  INFO 15744 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 02:07:55.153  WARN 15744 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-10 02:07:55.547  INFO 15744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-10 02:07:55.557  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:07:55.557  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:07:55.559  INFO 15744 --- [main] com.SmsPollar.SmsPollarApplication       : Started SmsPollarApplication in 8.757 seconds (JVM running for 9.206)
+2024-01-10 02:07:55.658  INFO 15744 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-10 02:07:55.658  INFO 15744 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-10 02:07:55.659  INFO 15744 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-10 02:07:55.688  INFO 15744 --- [http-nio-8080-exec-2] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:07:55.689 DEBUG 15744 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:07:56.333 DEBUG 15744 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:07:56.558  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:07:56.558  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:07:56.560  INFO 15744 --- [http-nio-8080-exec-1] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:07:56.561 DEBUG 15744 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:07:56.805 DEBUG 15744 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:07:57.565  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:07:57.565  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:07:57.567  INFO 15744 --- [http-nio-8080-exec-3] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:07:57.567 DEBUG 15744 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:07:58.055 DEBUG 15744 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:07:58.560  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:07:58.560  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:07:58.563  INFO 15744 --- [http-nio-8080-exec-4] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:07:58.563 DEBUG 15744 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:07:59.050 DEBUG 15744 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:07:59.558  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:07:59.558  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:07:59.560  INFO 15744 --- [http-nio-8080-exec-5] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:07:59.561 DEBUG 15744 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:00.048 DEBUG 15744 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:00.568  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:00.568  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:00.570  INFO 15744 --- [http-nio-8080-exec-6] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:00.571 DEBUG 15744 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:01.058 DEBUG 15744 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:01.569  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:01.569  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:01.571  INFO 15744 --- [http-nio-8080-exec-7] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:01.571 DEBUG 15744 --- [http-nio-8080-exec-7] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:02.059 DEBUG 15744 --- [http-nio-8080-exec-7] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:02.559  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:02.559  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:02.562  INFO 15744 --- [http-nio-8080-exec-8] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:02.562 DEBUG 15744 --- [http-nio-8080-exec-8] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:03.048 DEBUG 15744 --- [http-nio-8080-exec-8] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:03.568  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:03.568  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:03.570  INFO 15744 --- [http-nio-8080-exec-9] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:03.571 DEBUG 15744 --- [http-nio-8080-exec-9] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:04.059 DEBUG 15744 --- [http-nio-8080-exec-9] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:04.561  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:04.562  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:04.564  INFO 15744 --- [http-nio-8080-exec-10] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:04.564 DEBUG 15744 --- [http-nio-8080-exec-10] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:05.051 DEBUG 15744 --- [http-nio-8080-exec-10] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:05.560  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:05.560  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:05.562  INFO 15744 --- [http-nio-8080-exec-2] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:05.562 DEBUG 15744 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:06.052 DEBUG 15744 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:06.567  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:06.567  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:06.568  INFO 15744 --- [http-nio-8080-exec-1] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:06.569 DEBUG 15744 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:07.055 DEBUG 15744 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:07.565  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:08:07.565  INFO 15744 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:08:07.567  INFO 15744 --- [http-nio-8080-exec-3] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:08:07.567 DEBUG 15744 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:08:08.056 DEBUG 15744 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:08:08.131  INFO 15744 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 02:08:08.133  INFO 15744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-10 02:08:08.841  INFO 15744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-10 02:21:14.686  INFO 5528 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 5528 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 02:21:14.691 DEBUG 5528 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 02:21:14.692  INFO 5528 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 02:21:15.867  INFO 5528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 02:21:15.988  INFO 5528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interfaces.
+2024-01-10 02:21:17.151  INFO 5528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 02:21:17.168  INFO 5528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 02:21:17.169  INFO 5528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 02:21:17.326  INFO 5528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 02:21:17.326  INFO 5528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2538 ms
+2024-01-10 02:21:17.674  INFO 5528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-10 02:21:17.770  INFO 5528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-10 02:21:18.122  INFO 5528 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-10 02:21:18.247  INFO 5528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-10 02:21:21.405  INFO 5528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-10 02:21:21.429  INFO 5528 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2024-01-10 02:21:23.018  INFO 5528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-10 02:21:23.028  INFO 5528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 02:21:23.586  WARN 5528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-10 02:21:24.055  INFO 5528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-10 02:21:24.065  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:21:24.065  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:21:24.066  INFO 5528 --- [main] com.SmsPollar.SmsPollarApplication       : Started SmsPollarApplication in 9.992 seconds (JVM running for 10.542)
+2024-01-10 02:21:24.182  INFO 5528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-10 02:21:24.182  INFO 5528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-10 02:21:24.183  INFO 5528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-10 02:21:24.226  INFO 5528 --- [http-nio-8080-exec-1] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:21:24.226 DEBUG 5528 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:21:24.882 DEBUG 5528 --- [http-nio-8080-exec-1] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:21:25.068  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:21:25.068  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:21:25.071  INFO 5528 --- [http-nio-8080-exec-2] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:21:25.071 DEBUG 5528 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:21:25.317 DEBUG 5528 --- [http-nio-8080-exec-2] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:21:26.064  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:21:26.065  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:21:26.067  INFO 5528 --- [http-nio-8080-exec-3] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:21:26.068 DEBUG 5528 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:21:26.555 DEBUG 5528 --- [http-nio-8080-exec-3] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:21:27.076  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:21:27.076  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:21:27.078  INFO 5528 --- [http-nio-8080-exec-4] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:21:27.079 DEBUG 5528 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:21:27.565 DEBUG 5528 --- [http-nio-8080-exec-4] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:21:28.077  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:21:28.077  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:21:28.078  INFO 5528 --- [http-nio-8080-exec-6] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:21:28.078 DEBUG 5528 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:21:28.567 DEBUG 5528 --- [http-nio-8080-exec-6] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:21:29.071  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsScheduler     : start method get called
+2024-01-10 02:21:29.071  INFO 5528 --- [scheduling-1] com.SmsPollar.schedular.SmsInvoke        : invokeGetSms get called
+2024-01-10 02:21:29.073  INFO 5528 --- [http-nio-8080-exec-5] c.S.contoller.SmsPollarController        : [SmsPollarController][getSms]  SmsPollar getting Started
+2024-01-10 02:21:29.073 DEBUG 5528 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms]Inside getSms Method in SmsPoller
+2024-01-10 02:21:29.561 DEBUG 5528 --- [http-nio-8080-exec-5] com.SmsPollar.services.SmsPollarServies  : [SMSPoller][getSms] Getting records with status 'O' 
+2024-01-10 02:21:29.610  INFO 5528 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 02:21:29.612  INFO 5528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-10 02:21:30.412  INFO 5528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-10 11:46:11.485  INFO 16616 --- [main] com.SmsPollar.SmsPollarApplication       : Starting SmsPollarApplication using Java 17.0.2 on DESKTOP-JOBC9OT with PID 16616 (D:\yalamanchili\SmsPollar\target\classes started by Lenovo in D:\yalamanchili\SmsPollar)
+2024-01-10 11:46:11.489 DEBUG 16616 --- [main] com.SmsPollar.SmsPollarApplication       : Running with Spring Boot v2.7.17, Spring v5.3.30
+2024-01-10 11:46:11.490  INFO 16616 --- [main] com.SmsPollar.SmsPollarApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-01-10 11:46:12.587  INFO 16616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-10 11:46:12.710  INFO 16616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interfaces.
+2024-01-10 11:46:13.631  INFO 16616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-10 11:46:13.649  INFO 16616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-10 11:46:13.649  INFO 16616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-01-10 11:46:13.777  INFO 16616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-10 11:46:13.778  INFO 16616 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2211 ms
+2024-01-10 11:46:14.049  INFO 16616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-10 11:46:14.122  INFO 16616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-10 11:46:14.466  INFO 16616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-10 11:46:14.597  INFO 16616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-10 11:46:17.857  INFO 16616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-10 11:46:17.895  INFO 16616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2024-01-10 11:46:20.090  INFO 16616 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-10 11:46:20.105  INFO 16616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 11:46:20.919  WARN 16616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-10 11:46:21.588  INFO 16616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-10 11:46:21.610  INFO 16616 --- [main] com.SmsPollar.SmsPollarApplication       : Started SmsPollarApplication in 10.908 seconds (JVM running for 11.642)
+2024-01-10 11:48:01.575  INFO 16616 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-10 11:48:01.576  INFO 16616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-10 11:48:01.579  INFO 16616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-01-10 12:00:10.438  INFO 16616 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-10 12:00:10.447  INFO 16616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-10 12:00:11.373  INFO 16616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
